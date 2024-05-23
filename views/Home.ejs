@@ -21,6 +21,13 @@
 </head>
 <body>
     <h2>List Dokter</h2>
+    <p>
+        <select name="" id="">
+            <option value="" selected disabled>Sort by</option>
+            <option value=""><a href="/doctors">Name</a></option>
+            <option value=""><a href="https://google.com"><button>Age</button></a></option>
+        </select>
+    </p>
     <table>
         <thead>
             <tr>
@@ -31,7 +38,7 @@
             </tr>
         </thead>
         <tbody>
-           <% dok.forEach(el => { %>
+           <% data.forEach(el => { %>
             <tr>
                 <td><%= el.name %></td>
                 <td><%= el.gender %></td>

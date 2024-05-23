@@ -6,7 +6,8 @@ class Controller {
     
     static async home(req, res) {
         try {
-        res.send('Welcome to home')
+            const data = await Doctor.findAll();
+            res.render('Home', {data});
         } catch (error) {
             res.send(error.message);
         }
@@ -74,6 +75,13 @@ class Controller {
         }
     }
     
+    static async showAppointments() {
+        try {
+            console.log('showAppointments')
+        } catch (error) {
+            res.send(error.message);
+        }
+    }
 }
 
 
