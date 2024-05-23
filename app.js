@@ -1,5 +1,5 @@
 const express = require('express');
-const { home } = require('./controllers');
+const { home, showDoctors, showDoctorById } = require('./controllers');
 const app = express()
 const port = 3000
 
@@ -8,8 +8,8 @@ app.set("view engine", "ejs");
 app.use(express.urlencoded({ extended: true }));
 
 app.get("/", home);
-app.get("/doctors", );
-app.get("/doctors/:id", );
+app.get("/doctors", showDoctors);
+app.get("/doctors/:id", showDoctorById);
 app.get("/", );
 app.get("/", );
 app.get("/", );
