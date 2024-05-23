@@ -1,0 +1,22 @@
+[
+    {
+      "name": "Dr. Amanda Chen",
+      "gender": "Female",
+      "specialist": "Anak"
+    },
+    {
+      "name": "Dr. William Johnson",
+      "gender": "Male",
+      "specialist": "Gigi"
+    },
+    {
+      "name": "Dr. Ethan Miller",
+      "gender": "Male",
+      "specialist": "THT"
+    },
+    {
+      "name": "Dr. Olivia Martinez",
+      "gender": "Female",
+      "specialist": "Mata"
+    }
+  ]
