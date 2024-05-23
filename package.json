@@ -1,0 +1,19 @@
+{
+  "name": "h8-phase1-pair-project",
+  "version": "1.0.0",
+  "description": "Pair project phase 1\r kelompok 2\r tema: health technology",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "pg": "^8.11.5",
+    "sequelize": "^6.37.3"
+  },
+  "devDependencies": {
+    "sequelize-cli": "^6.6.2"
+  }
+}
