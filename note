@@ -1,0 +1,11 @@
+get(/register)
+post(/register)
+get(/login)
+post(/login)
+
+
+get("/", home)
+get("/",)
+get("/")
+get("/")
+get("/")

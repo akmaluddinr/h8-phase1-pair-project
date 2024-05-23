@@ -2,21 +2,25 @@
     {
       "name": "Dr. Amanda Chen",
       "gender": "Female",
+      "email": "AmandaChen12@gmail.com",
       "specialist": "Anak"
     },
     {
       "name": "Dr. William Johnson",
       "gender": "Male",
+      "email": "WilliJon111@gmail.com",
       "specialist": "Gigi"
     },
     {
       "name": "Dr. Ethan Miller",
       "gender": "Male",
+      "email": "EthanMil123@gmail.com",
       "specialist": "THT"
     },
     {
       "name": "Dr. Olivia Martinez",
       "gender": "Female",
+      "email": "OlivMartin007@gmail.com",
       "specialist": "Mata"
     }
   ]
