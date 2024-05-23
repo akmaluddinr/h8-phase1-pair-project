@@ -22,5 +22,17 @@
       "gender": "Female",
       "email": "OlivMartin007@gmail.com",
       "specialist": "Mata"
+    },
+    {
+      "name": " Dr. Benjamin Lee",
+      "gender": "Male",
+      "email": "BenjamiLee7@gmail.com",
+      "specialist": "Saraf"
+    },
+    {
+      "name": "  Dr. Mia Nguyen",
+      "gender": "Female",
+      "email": "MiaYen2001@gmail.com",
+      "specialist": "Kandungan"
     }
   ]
