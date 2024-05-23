@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
+    <title>Klinik Sehat</title>
     <style>
         body, html {
             margin: 0;
@@ -57,5 +57,27 @@
                 <a href=""> <button>List Appointment</button></a>
             </div>
         </div>
+        <div class="content">
+            <h2>List Doctors</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Gender</th>
+                <th>Email</th>
+                <th>Specialist</th>
+            </tr>
+        </thead>
+        <tbody>
+           <% dok.forEach(el => { %>
+            <tr>
+                <td><%= el.name %></td>
+                <td><%= el.gender %></td>
+                <td><%= el.email %></td>
+                <td><%= el.specialist %></td>
+            </tr>
+           <% }) %>
+        </tbody>
+    </table>
 </body>
 </html>

@@ -6,8 +6,7 @@ class Controller {
     
     static async home(req, res) {
         try {
-            const data = await Doctor.findAll();
-            res.render('Home', {data});
+        res.render('Home')
         } catch (error) {
             res.send(error.message);
         }
@@ -41,7 +40,6 @@ class Controller {
     }
 
     static async postLogin(req, res) {
-        // console.log(req.body);
         const { username, password } = req.body;
         try {
             const user = await User.findOne({
@@ -69,7 +67,8 @@ class Controller {
 
     static async showDoctors(req, res) {
         try {
-            console.log('showDoctors')
+            const dok = await Doctor.findAll();
+            res.render('Doctor', { dok });
         } catch (error) {
             res.send(error.message);
         }
