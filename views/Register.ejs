@@ -4,26 +4,82 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Register</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+        }
+        .container {
+            max-width: 400px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        input[type="text"],
+        input[type="password"],
+        input[type="email"] {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #4caf50;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
 </head>
 <body>
-    <h1>Register here</h1>
+
+<div class="container">
+    <h2>Register here</h2>
     <form method="post">
-        <p>
-            <input type="text" name="username" id="username" placeholder="Username">
-        </p>
-        <p>
-            <input type="email" name="email" id="email" placeholder="Email">
-        </p>
-        <p>
-            <input type="password" name="password" id="password" placeholder="Password">
-        </p>
-        <p>
-            <input type="radio" name="role" id="role" value="Patient">
-            <label for="role">Patient</label>
-            <input type="radio" name="role" id="role" value="Admin">
-            <label for="role">Doctor</label>
-        </p>
-        <button type="submit">Register</button>
+        <div class="form-group">
+            <label for="username">Nama:</label>
+            <input type="text" id="username" name="username" required>
+        </div>
+        <div class="form-group">
+            <label for="password">Kata Sandi:</label>
+            <input type="password" id="password" name="password" required>
+        </div>
+        <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+        </div>
+        <div class="form-group">
+            <label for="role">Peran:</label>
+            <select id="role" name="role" required>
+                <option value="">Pilih Peran</option>
+                <option value="Admin">Admin</option>
+                <option value="Patient">User</option>
+            </select>
+        </div>
+        <button type="submit">Daftar</button>
     </form>
+</div>
+
 </body>
 </html>
