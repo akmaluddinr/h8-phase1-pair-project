@@ -1,5 +1,5 @@
 const express = require('express');
-const { home, getRegister, postRegister, getLogin, postLogin, showDoctors } = require('./controllers');
+const { home, getRegister, postRegister, getLogin, postLogin, showDoctors, showAppointments, addAppointment, postAddAppointment, getLogout, getProfile, fillProfile, postFillProfile } = require('./controllers');
 const app = express()
 const session = require('express-session');
 const port = 3000
@@ -21,8 +21,8 @@ app.post("/login", postLogin);
 
 app.use((req, res, next) => {
   if (!req.session.userId) {
-    const error = 'Please login first';
-    res.redirect(`/login?error=${error}`);
+    const error = 'Silahkan register atau login';
+    res.redirect(`/register?error=${error}`);
   } else {
     next()
   }
@@ -30,6 +30,14 @@ app.use((req, res, next) => {
 
 app.get("/", home);
 app.get("/doctors", showDoctors);
+app.get("/appointments", showAppointments);
+app.get("/appointments/add", addAppointment);
+app.post("/appointments/add", postAddAppointment);
+app.get("/profile/", getProfile);
+app.get("/profile/fill", fillProfile);
+app.post("/profile/fill", postFillProfile);
+
+app.get("/logout", getLogout);
 
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`)

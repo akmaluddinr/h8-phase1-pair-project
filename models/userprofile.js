@@ -10,15 +10,73 @@ module.exports = (sequelize, DataTypes) => {
      * The `models/index` file will call this method automatically.
      */
     static associate(models) {
-      // define association here
+      UserProfile.belongsTo(models.User);
     }
   }
   UserProfile.init({
-    firstName: DataTypes.STRING,
-    lastName: DataTypes.STRING,
-    dateOfBirth: DataTypes.DATE,
-    gender: DataTypes.STRING,
-    UserId: DataTypes.INTEGER
+    firstName: {
+      type: DataTypes.STRING,
+      allowNull: false,
+      validate: {
+        notEmpty: {
+          msg: 'Silahkan lengkapi profil terlebih dahulu'
+        },
+        notNull: {
+          msg: 'Silahkan lengkapi profil terlebih dahulu'
+        }
+      }
+    },
+    lastName: {
+      type: DataTypes.STRING,
+      allowNull: false,
+      validate: {
+        notEmpty: {
+          msg: 'Silahkan lengkapi profil terlebih dahulu'
+        },
+        notNull: {
+          msg: 'Silahkan lengkapi profil terlebih dahulu'
+        }
+      }
+    },
+    dateOfBirth: {
+      type: DataTypes.DATE,
+      allowNull: false,
+      validate: {
+        notEmpty: {
+          msg: 'Silahkan lengkapi profil terlebih dahulu'
+        },
+        notNull: {
+          msg: 'Silahkan lengkapi profil terlebih dahulu'
+        }
+      }
+    },
+    gender: {
+      type: DataTypes.STRING,
+      allowNull: false,
+      validate: {
+        notEmpty: {
+          msg: 'Silahkan lengkapi profil terlebih dahulu'
+        },
+        notNull: {
+          msg: 'Silahkan lengkapi profil terlebih dahulu'
+        }
+      }
+    },
+    UserId: {
+      type: DataTypes.INTEGER,
+      references: {
+        model: 'User'
+      },
+      allowNull: false,
+      validate: {
+        notEmpty: {
+          msg: 'Silahkan lengkapi profil terlebih dahulu'
+        },
+        notNull: {
+          msg: 'Silahkan lengkapi profil terlebih dahulu'
+        }
+      }
+    }
   }, {
     sequelize,
     modelName: 'UserProfile',

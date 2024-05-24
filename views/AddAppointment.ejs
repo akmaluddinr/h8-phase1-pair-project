@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Appointment</title>
+</head>
+<body>
+    <h1>Data</h1>
+
+    <p>
+        Nama: &nbsp;<%= user.lastName %><br>
+        Umur: <%= user.age %><br>
+        Gender: <%= user.gender %>
+    </p>
+
+    <form method="post">
+        <p>
+            <label for="patient">Nama pasien</label><br>
+            <input name="patient" id="patient" type="text" value="<%= user.firstName %>">
+        </p>
+        <p>
+            <label for="doctor">Nama dokter</label><br>
+            <input name="doctor" id="doctor" type="text" value="<%= doctor.name %>">
+        </p>
+        <p>
+            <label for="date">Pilih tanggal</label><br>
+            <input name="date" id="date" type="date">
+        </p>
+        <p>
+            <label for="cost">Pilih tanggal</label><br>
+            <input name="cost" id="cost" type="number">
+        </p>
+
+        <button type="submit">Daftar</button>
+    </form>
+</body>
+</html>
