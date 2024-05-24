@@ -55,7 +55,10 @@
 <body>
 
 <div class="container">
-    <h2>Register here</h2>
+    <% if (error) { %>
+        <p style="color: red; font-weight: bold;"><%= error %></p>
+       <% } %>
+    <h2>Silahkan register</h2>
     <form method="post">
         <div class="form-group">
             <label for="username">Nama:</label>
@@ -79,6 +82,8 @@
         </div>
         <button type="submit">Daftar</button>
     </form>
+    <h2>Atau login</h2>
+    <a href="/login"><button>Login</button></a>
 </div>
 
 </body>
